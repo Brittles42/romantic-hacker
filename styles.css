@@ -19,6 +19,11 @@ body {
 .container {
     text-align: center;
     padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -33,13 +38,17 @@ h2 {
     font-family: 'Poppins', sans-serif;
     color: var(--secondary-color);
     margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 .wheel-container {
-    margin: 2rem auto;
+    margin: 0 auto;
     position: relative;
     width: 300px;
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .wheel {
@@ -87,15 +96,16 @@ h2 {
 
 .advice-container {
     width: 100%;
-    margin-top: 2rem;
     padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .advice {
     max-width: 500px;
+    width: 100%;
     margin: 0 auto;
     padding: 1.5rem;
     font-size: 1.4rem;
@@ -109,6 +119,7 @@ h2 {
 }
 
 .spin-button {
+    position: relative;
     display: block;
     margin: 2rem auto 0;
     padding: 1rem 2rem;
@@ -119,6 +130,7 @@ h2 {
     border-radius: 25px;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
+    width: fit-content;
 }
 
 .spin-button:hover {
