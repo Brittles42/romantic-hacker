@@ -44,40 +44,61 @@ h2 {
 .wheel-container {
     margin: 2rem auto;
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     aspect-ratio: 1/1;
 }
 
 .wheel {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     position: relative;
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+    border: 8px solid var(--primary-color);
 }
 
-.wheel-arrow {
+.wheel::before {
+    content: '';
     position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 30px solid var(--primary-color);
-    z-index: 2;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    animation: borderSpin 10s linear infinite;
+}
+
+.wheel::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 2px dashed var(--primary-color);
+    border-radius: 50%;
+    animation: borderSpin 15s linear infinite reverse;
+}
+
+@keyframes borderSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .wheel-content {
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     overflow: hidden;
     background: conic-gradient(
@@ -92,6 +113,20 @@ h2 {
         #ffc8dd 87.5%,
         #ff4b6e 100%
     );
+}
+
+.wheel-arrow {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid var(--primary-color);
+    z-index: 2;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .advice-container {
