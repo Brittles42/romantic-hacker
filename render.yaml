@@ -1,8 +1,7 @@
 services:
-  - type: web
+  - type: static
     name: romantic-hacker
-    env: static
-    buildCommand: echo "Static site - no build needed"
+    buildCommand: null  # No build step needed for simple static files
     staticPublishPath: .
     routes:
       - type: rewrite
