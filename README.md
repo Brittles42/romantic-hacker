@@ -22,14 +22,13 @@ Simply open `index.html` in your web browser to run the site locally.
 
 2. **Connect to Render**
    - Go to [render.com](https://render.com)
-   - Sign in with your account
-   - Click "New +" and select "Static Site"
-   - Connect your GitHub repository
+   - Sign in with your git hub account
+   - Click "New +" connect the repository, and select "Static Site"
 
 3. **Configure Build Settings**
    - Name: `romantic-hacker` (or your preferred name)
    - Build Command: Leave empty (no build command needed)
-   - Publish Directory: Type `./` (this is very important!)
+   - Publish Directory: Type `./` (Enter this into render for static site deploy)
 
 4. **Deploy**
    - Click "Create Static Site"
