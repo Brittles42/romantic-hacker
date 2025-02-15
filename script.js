@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "Your heart knows the right syntax for love.",
     ];
 
+    // Show initial message when page loads
+    adviceDisplay.textContent = "Click the button above to spin for romantic tech advice! 💝";
+
     let canSpin = true;
     let currentRotation = 0;
 

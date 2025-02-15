@@ -73,17 +73,44 @@ h2 {
     overflow: hidden;
     background: conic-gradient(
         from 0deg,
-        var(--primary-color) 0%,
-        var(--secondary-color) 20%,
-        #ff9eaf 40%,
-        var(--primary-color) 60%,
-        var(--secondary-color) 80%,
-        #ff9eaf 100%
+        #ff4b6e 0%,
+        #ff8fa3 12.5%,
+        #b6c9f0 25%,
+        #e2f0cb 37.5%,
+        #ffd6e5 50%,
+        #ffacc7 62.5%,
+        #c1e3ff 75%,
+        #ffc8dd 87.5%,
+        #ff4b6e 100%
     );
 }
 
-.spin-button {
+.advice-container {
+    width: 100%;
     margin-top: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advice {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: opacity 0.3s ease;
+    border: 2px solid var(--secondary-color);
+}
+
+.spin-button {
+    display: block;
+    margin: 2rem auto 0;
     padding: 1rem 2rem;
     font-size: 1.2rem;
     background-color: var(--primary-color);
@@ -97,14 +124,6 @@ h2 {
 .spin-button:hover {
     background-color: var(--secondary-color);
     transform: scale(1.05);
-}
-
-.advice {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    min-height: 60px;
-    padding: 1rem;
 }
 
 .hearts {
