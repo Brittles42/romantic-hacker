@@ -1,8 +1,8 @@
 services:
   - type: static
     name: romantic-hacker
-    buildCommand: null  # No build step needed for simple static files
-    staticPublishPath: .
+    buildCommand: null  # No build command needed - files are ready to serve
+    staticPublishPath: ./  # Serve files from root directory
     routes:
       - type: rewrite
         source: /*
